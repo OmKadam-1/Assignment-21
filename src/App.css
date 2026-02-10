@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f1dcc5, #e6efd9);
+  margin: 0;
+}
+
+/* Header */
+.showData {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2f4f2f;
+}
+
+/* Main container */
+.main-input-con {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs */
+.inputCon {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input {
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1.5px solid #d1d5db;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: #89986d;
+  box-shadow: 0 0 0 3px rgba(137, 152, 109, 0.25);
+}
+
+/* Error */
+.error {
+  font-size: 14px;
+  color: #dc2626;
+  display: none;
+}
+
+.error.show {
+  display: block;
+}
+
+/* Select */
+.select-con {
+  margin-top: 18px;
+}
+
+.select-con select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1.5px solid #d1d5db;
+  outline: none;
+}
+
+.select-con select:focus {
+  border-color: #89986d;
+}
+
+/* Radio buttons */
+.radio-btn {
+  display: flex;
+  gap: 24px;
+  margin-top: 22px;
+  font-size: 16px;
+  color: #374151;
+}
+
+.radio-btn div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Checkbox */
+.checkBox {
+  margin-top: 24px;
+}
+
+.checkBox p {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #374151;
+}
+
+.checkBox-input-con {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 14px;
+}
+
+.checkBox-input-con label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #374151;
+}
+
+/* Buttons */
+.btn-con {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.btn {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: #89986d;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: #3a4a2b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btnDisable {
+  background: #cbd5c0;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .main-input-con {
+    padding: 22px;
+  }
+
+  .name {
+    font-size: 26px;
+  }
+
+  .checkBox-input-con {
+    grid-template-columns: 1fr;
+  }
+}
